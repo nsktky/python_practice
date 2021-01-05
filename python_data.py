@@ -50,3 +50,92 @@ print(id(X))
 print(id(Y))
 print(Y)
 print(X)
+
+
+###tuple
+
+num_tuple = (10, 20)
+print(num_tuple)
+
+x, y = num_tuple
+print(x, y)
+
+x, y = 10, 20
+print(x, y)
+
+min, max = 0, 100
+print(min, max)
+
+# a, b, c, d, e, f = 'Mike', '1', '1', '1', 'e', 'f'
+# 長くなると読みにくいからだめ
+a = 'Mike'
+b = '1'
+
+# アンパッキング
+i = 10
+j = 20
+tmp = i
+i = j
+j = tmp
+
+print(i, j)
+
+a = 100
+b = 200
+print(a, b)
+a, b = b, a
+print(a, b)
+
+
+# tupleは変更できないので、変えたくないものを入れておくのに良い。
+# あとで間違えてもエラーが出るのでバグとわかる。
+
+chose_from_two = ('A', 'B', 'C')
+# chose_from_two = ['A', 'B', 'C']
+
+answer = []
+
+# chose_from_two.append('A')
+# chose_from_two.append('C')
+
+answer.append('A')
+answer.append('B')
+
+print(chose_from_two)
+print(answer)
+
+# 辞書型の参照渡し
+
+x = {'a': 1}
+y = x
+y['a'] = 1000
+print(x)
+print(y)
+
+x = {'a': 1}
+y = x.copy()
+y['a'] = 1000
+print(x)
+print(y)
+
+# 辞書型はハッシュテーブルを用いている。
+# キーがわかればすぐvalueを取り出せる。リストで実装もできるけど、普通は辞書型
+fruits ={
+    'apple': 100,
+    'banana': 200,
+    'orange': 300,
+}
+
+print(fruits['apple'])
+
+
+# 集合
+my_friends = {'A', 'C', 'D'}
+A_friends = {'B', 'D', 'E', 'F'}
+# 共通の友達を表示
+print(my_friends & A_friends)
+
+# リストに追加されたものの種類だけを表示
+f = ['apple', 'banana', 'apple', 'banana']
+kind = set(f)
+print(kind)
