@@ -134,3 +134,65 @@ count = 0
 while count < 5:
     print(count)
     count += 1
+
+count = 0
+while True:
+    if count >= 5:
+        break
+
+    if count == 2:
+        count += 1
+        continue
+
+    print(count)
+    count += 1
+
+
+count = 0
+
+# whileでbreakされなければelseにいく
+while count < 5:
+    print(count)
+    count += 1
+else:
+    print('done')
+
+# 正しいinputがあるまでループする処理
+# while True:
+#     word = input('Enter:')
+#     num = int(word)
+#     if num == 100:
+#         break
+#     print('next')
+
+
+print('################################')
+# for文
+some_list = [1, 2, 3, 4, 5]
+
+# i = 0
+# while i < len(some_list):
+#     print(some_list[i])
+#     i += 1
+
+for i in some_list:
+    print(i)
+
+for s in 'abcde':
+    print(s)
+
+for word in ['My', 'name', 'is', 'Mike']:
+    if word == 'name':
+        continue
+    if word == 'is':
+        break
+    print(word)
+
+# breakで抜けるとelseに行かない
+for fruit in ['apple', 'banana', 'orange']:
+    if fruit == 'banana':
+        print('stop eating')
+        break
+    print(fruit)
+else:
+    print('I ate all')
