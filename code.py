@@ -196,3 +196,19 @@ for fruit in ['apple', 'banana', 'orange']:
     print(fruit)
 else:
     print('I ate all')
+
+
+print('###########################')
+# range関数
+
+# num_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# for i in num_list:
+#     print(i)
+
+for i in range(2, 10, 3):
+    print(i)
+
+# _にすることで、for文の中でiなどの変数使わないことを明示
+for _ in range(10):
+    print('hello')
