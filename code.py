@@ -212,3 +212,28 @@ for i in range(2, 10, 3):
 # _にすることで、for文の中でiなどの変数使わないことを明示
 for _ in range(10):
     print('hello')
+
+
+
+print('###########################')
+# zip関数
+
+days = ['Mon', 'Tue', 'Wed']
+fruits = ['apple', 'banana', 'orange']
+drinks = ['coffee', 'tea', 'beer']
+
+# for i in range(len(days)):
+#     print(days[i], fruits[i], drinks[i])
+
+for day, fruit, drink in zip(days, fruits, drinks):
+    print(day, fruit, drink)
+
+
+print('###########################')
+# dicのfor処理
+
+d = {'x': 100, 'y': 200}
+print(d.items())
+
+for k, v in d.items():
+    print(k, ':', v)
