@@ -76,3 +76,40 @@ print(r)
 
 r = test_func(100)
 print(r)
+
+
+# 引数によるタプル化　*argsに変数が複数渡るとタプルにしてくれる
+# 位置引数と合わせて書くこともできる。
+def say_something(word, *args):
+    print('word =', word)
+    for arg in args:
+        print(arg)
+
+say_something('Hi!', 'Mike', 'Nance')
+
+print('##################################################')
+# 引数の辞書化
+def menu(**kwargs):
+    print(kwargs)
+    for k, v in kwargs.items():
+        print(k, v)
+
+menu(entree='beef', drink='coffee')
+
+print('##################################################')
+
+d = {
+    'entree': 'beef',
+    'drink': 'ice coffee',
+    'deseert': 'ice',
+}
+# **dで辞書を展開してmunu関数に渡す
+menu(**d)
+
+print('##################################################')
+
+def menu(food, *args, **kwargs):
+    print(food, args, kwargs)
+
+# appleはfoodに渡される。banana,orangeは*argsでタプル化。キーワード引数は**kwaegsで辞書化
+menu('apple', 'banana', 'orange', entree='beef', drink='beer')
